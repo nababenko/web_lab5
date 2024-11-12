@@ -4,18 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab5</title>
+    <script src="script.js"></script>
+    <style>
+        .error { color: red; }
+    </style>
 </head>
 <body>
     <head>Лабораторна робота №5 виконала Бабенко Анастасія ІС-33</head>
 
     <main>
         <section class="task1">
-            
+            <h2>Завдання №1</h2>
+            <form onsubmit="calculate(event)">
+                <label for="quantity">Кількість замовлених дроїдів</label>
+                <input type="number" id="quantity" required>
+                <label for="price">Вартість одного дроїда</label>
+                <input type="number" id="price" required>
+                <button type="submit">Розрахувати</button>
+            </form>
+
+            <p id="message"></p>
         </section>
-        <section class="task2"></section>
-        <section class="task3"></section>
-        <section class="task4"></section>
-        <section class="task5"></section>
+
+        <section class="task2">
+            <h2>Завдання №2</h2>
+            <form onsubmit="checkMessage(event)">
+                <label for="textMessage">Введіть повідомлення для перевірки</label>
+                <input type="text" id="textMessage" placeholder="Enter your message" required>
+                <button type="submit">Перевірити на спам</button>
+            </form>
+
+            <p>Результат:</p>
+            <p id="result"></p>
+
+        </section>
+
+        <section class="task3">
+            <h2>Завдання №3</h2>
+            <form onsubmit="filterFunction(event)">
+                <label for="textArray">Введіть числа через кому</label>
+                <input type="text" id="textArray" placeholder="number, number, number ..." required>
+                <label for="number">Введіть число для порівняння</label>
+                <input type="text" id="number" required>
+                <button type="submit">Відфільтрувати</button>
+            </form>
+
+            <p id="resultArray"></p>
+        </section>
+
+        <section class="task4">
+            <h2>Завдання №4</h2>
+            <form onsubmit="processArray(event)">
+                <label for="arrayLength">Кількість елементів масиву:</label>
+                <input type="number" id="arrayLength" min="1" required>
+                <button type="submit">Створити масив та обробити</button>
+            </form>
+
+            <p id="inputArray"></p>
+            <p id="outputArray"></p>
+            <p id="sortedArray"></p>
+        </section>
+
+        <section class="task5">
+            <h2>Завдання №5</h2>
+            <form id="myForm" onsubmit="validateForm(event)">
+                <label for="intField">Ціле число (*)</label>
+                <input type="text" id="intField" required>
+                <span class="error" id="intError"></span>
+                <br>
+
+                <label for="floatField">Дійсне число (*)</label>
+                <input type="text" id="floatField" required>
+                <span class="error" id="floatError"></span>
+                <br>
+
+                <label for="dateField">Дата (DD.MM.YYYY) (*)</label>
+                <input type="text" id="dateField" required>
+                <span class="error" id="dateError"></span>
+                <br>
+
+                <label for="password">Пароль (*)</label>
+                <input type="password" id="password" required>
+                <span class="error" id="passwordError"></span>
+                <br>
+
+                <label for="confirmPassword">Підтвердження паролю (*)</label>
+                <input type="password" id="confirmPassword" required>
+                <span class="error" id="confirmPasswordError"></span>
+                <br>
+
+                <button type="submit">Відправити</button>
+                <p id="formStatus" class="error"></p>
+            </form>
+
+        </section>
     </main>
 
     <footer><p>ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ. ВИКОРИСТАННЯ МАСИВІВ У JS-СЦЕНАРІЯХ. РЕАЛІЗАЦІЯ ПРОГРАМ ЗАСОВАМИ МОВИ JAVASCRIPT</p></footer>
